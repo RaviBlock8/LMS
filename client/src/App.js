@@ -13,6 +13,7 @@ import "./App.css";
 import { connect } from "react-redux";
 //Router import
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LeaveApproval from "./pages/LeaveApproval/LeaveApproval";
 
 function App(props) {
   const [isAuthenticated, setAuthentication] = useState(false);
@@ -31,6 +32,9 @@ function App(props) {
             <Switch>
               <Route path="/addLeave">
                 <ApplyLeave />
+              </Route>
+              <Route path="/lapr">
+                <LeaveApproval></LeaveApproval>
               </Route>
               <Route path="/">
                 <EmpDashboard />
