@@ -4,8 +4,8 @@ import "./login.css";
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const staticEmail = "ravi@gmail.com";
-  const staticPassword = "password1";
+  const staticEmail = "1";
+  const staticPassword = "1";
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
