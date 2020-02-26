@@ -15,7 +15,8 @@ function LeaveTable(props) {
       <table>
         <tr id="thr">
           <th>Leave Type</th>
-          <th>Date</th>
+          <th>From</th>
+          <th>To</th>
           <th>Days</th>
           <th>Status</th>
           <th>Edit</th>

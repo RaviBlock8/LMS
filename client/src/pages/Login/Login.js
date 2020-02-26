@@ -4,8 +4,8 @@ import "./login.css";
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const staticEmail = "ravi@gmail.com";
-  const staticPassword = "password1";
+  const staticEmail = "1";
+  const staticPassword = "1";
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -26,8 +26,11 @@ function Login(props) {
   function buttonClick(event) {
     event.preventDefault();
     if (password === staticPassword && email === staticEmail) {
-      console.log("Working");
+     
+
+      //this is where api will get hit
       props.setAuthentication(true);
+
     } else {
       console.log("not working");
       alert("enter correct details");
