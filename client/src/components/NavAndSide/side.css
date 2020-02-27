@@ -1,8 +1,8 @@
 div#sidebar{
     height:90vh;
-    /* width:17vw; */
+
     box-sizing: border-box;
-    /* box-shadow: 2px 2px 4px black; */
+   
 }
 
 #sidebar button{
@@ -19,15 +19,12 @@ div#sidebar{
     border:1px solid rgb(184, 182, 182);
     box-shadow: 0px 0px 0px black;
     transition: box-shadow 500ms;
-    /* border:none; */
     border-radius:5px;
+    margin-bottom:1px;
     
 }
 
-button#dashb{
-    background: #05b7e8;
-    color:white;
-}
+
 #sidebar button img{
     width:1vw;
 }
@@ -37,5 +34,10 @@ button#dashb{
     box-shadow: 2px 2px 8px black;
     border:none;
     z-index:100;
+    color:white;
+}
+
+#sidebar button.selected{
+    background:#05b7e8;
     color:white;
 }
