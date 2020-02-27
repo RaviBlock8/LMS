@@ -1,12 +1,13 @@
 import React from "react";
-import PendingRequests from "../LeaveApproval/PendingRequests";
-import ApprovalHistory from "../LeaveApproval/ApprovalHistory";
+// import ApprovalHistory from "../LeaveApproval/ApprovalHistory";
+import PendingRequestsTable from "./PendingRequestsTable";
+import ApprovalHistoryTable from "./ApprovalHistoryTable";
 
 function LeaveApproval() {
   return (
     <div>
-      <PendingRequests></PendingRequests>
-      <ApprovalHistory></ApprovalHistory>
+      <PendingRequestsTable></PendingRequestsTable>
+      <ApprovalHistoryTable></ApprovalHistoryTable>
     </div>
   );
 }

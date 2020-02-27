@@ -14,6 +14,7 @@ import { connect } from "react-redux";
 //Router import
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LeaveApproval from "./pages/LeaveApproval/LeaveApproval";
+import EmployeeManager from "./pages/EmployeeManager/EmployeeManager";
 
 function App(props) {
   const [isAuthenticated, setAuthentication] = useState(false);
@@ -35,6 +36,9 @@ function App(props) {
               </Route>
               <Route path="/lapr">
                 <LeaveApproval></LeaveApproval>
+              </Route>
+              <Route path="/emp">
+                <EmployeeManager></EmployeeManager>
               </Route>
               <Route path="/">
                 <EmpDashboard />
