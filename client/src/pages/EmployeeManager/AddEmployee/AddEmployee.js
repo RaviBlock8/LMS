@@ -10,7 +10,7 @@ function AddEmployee() {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="divOne">
+        <div>
           <label>
             First name<span id="mandatory">*</span>
           </label>
@@ -30,7 +30,7 @@ function AddEmployee() {
           />
           {errors.lastName && "Last name is required"}
         </div>
-        <div className="divTwo">
+        <div>
           <label>
             Email<span id="mandatory">*</span>
           </label>
@@ -45,7 +45,7 @@ function AddEmployee() {
           <input name="employeeId" ref={register({ required: true })} />
           {errors.employeeId && "Employee Id is required"}
         </div>
-        <div className="divThree">
+        <div>
           <label>
             Status<span id="mandatory">*</span>
           </label>
@@ -60,7 +60,7 @@ function AddEmployee() {
           </label>
           <DatePicker name="doj" ref={register({ required: true })} />
         </div>
-        <div className="divFour">
+        <div>
           <label>
             Role<span id="mandatory">*</span>
           </label>
@@ -88,7 +88,7 @@ function AddEmployee() {
           </select>
           {errors.gender && "Gender is required"}
         </div>
-        <div className="divfive">
+        <div>
           <label>
             Password<span id="mandatory">*</span>
           </label>
@@ -108,7 +108,7 @@ function AddEmployee() {
           />
           {errors.password2 && "This field is required"}
         </div>
-        <div className="divSix">
+        <div>
           {/* <input type="submit" /> */}
           <button id="saveBtn" type="submit">
             Save

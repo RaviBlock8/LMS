@@ -5,7 +5,7 @@ import "./login.css";
 
 function Login(props) {
   const staticEmail = "ravi@gmail.com";
-  const staticPassword = "password1";
+  const staticPassword = "1";
 
   //getting context
   let [empid, setEmpid] = useContext(EmpIdContext);

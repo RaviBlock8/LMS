@@ -36,7 +36,7 @@ function App(props) {
 
           <div>
             <Switch>
-            <Route path="/addemp">
+              <Route path="/addemp">
                 <AddEmployee></AddEmployee>
               </Route>
               <Route path="/emp">

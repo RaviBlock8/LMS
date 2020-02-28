@@ -13,7 +13,6 @@ function LeaveList(props) {
   return (
     <div id="leavelist">
       <table>
-
         <tr>
           <th> </th>
           <th>Total</th>
@@ -26,7 +25,6 @@ function LeaveList(props) {
         </tr>
 
         {getData()}
-        
       </table>
     </div>
   );

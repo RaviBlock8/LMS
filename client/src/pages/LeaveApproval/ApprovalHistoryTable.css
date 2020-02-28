@@ -1,0 +1,41 @@
+#tableApproval table{
+  
+    box-shadow: 3px 3px 8px black;
+    border-radius: 5px;
+    display: block;
+    width:60vw;
+    
+    height: 40vh;
+    overflow-y: scroll;
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
+#approvalHeading{
+    margin-left: 1rem;
+    border:2px solid black;
+    width: fit-content;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    margin-top: 2rem;
+}
+td , th{
+    box-sizing: border-box;
+    width:10vw;
+    height: 7vh;
+    padding:1rem;
+    margin:0;
+    text-align: center;
+    font-size:0.9rem;
+    
+}
+
+#thr{
+    background: whitesmoke;
+}
+
+#pen_img{
+    width:2vw;
+    cursor: pointer;
+}
