@@ -23,6 +23,7 @@ function LeaveList(props) {
           </th>
           <th>Available</th>
         </tr>
+
         {getData()}
       </table>
     </div>

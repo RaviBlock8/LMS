@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 //Fixed components
 import Nav from "./components/NavAndSide/Nav";
 import Sidebar from "./components/NavAndSide/SideBar";
 //Pages
 import EmpDashboard from "./pages/EmpDashboard/EmpDashboard";
-import ApplyLeave from "./pages/ApplyLeave/ApplyLeave";
 import Login from "./pages/Login/Login";
+import AddLeave from "./pages/AddLeave/AddLeave";
 //css file import
 import "./App.css";
 
@@ -13,12 +13,18 @@ import "./App.css";
 import { connect } from "react-redux";
 //Router import
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+//importing providers
+import { EmpIdContext } from "./contexts/EmpId/EmpIdContext";
+import AddEmployee from "./pages/EmployeeManager/AddEmployee/AddEmployee";
+import EmployeeManager from "./pages/EmployeeManager/EmployeeManager";
 import LeaveApproval from "./pages/LeaveApproval/LeaveApproval";
 
 function App(props) {
   const [isAuthenticated, setAuthentication] = useState(false);
 
-  return isAuthenticated ? (
+  let [empid, setEmpid] = useContext(EmpIdContext);
+
+  return empid != null ? (
     <Router basename={`${process.env.PUBLIC_URL}/`}>
       <div className="App" id="app">
         <div id="top">
@@ -30,11 +36,17 @@ function App(props) {
 
           <div>
             <Switch>
-              <Route path="/addLeave">
-                <ApplyLeave />
+              <Route path="/addemp">
+                <AddEmployee></AddEmployee>
+              </Route>
+              <Route path="/emp">
+                <EmployeeManager></EmployeeManager>
               </Route>
               <Route path="/lapr">
                 <LeaveApproval></LeaveApproval>
+              </Route>
+              <Route path="/addLeave">
+                <AddLeave></AddLeave>
               </Route>
               <Route path="/">
                 <EmpDashboard />

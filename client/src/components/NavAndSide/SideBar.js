@@ -1,10 +1,13 @@
 import React from "react";
 import "./side.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 function SideBar() {
   //fake data
   const role = "admin";
+  //getting location
+  let location = useLocation();
+  console.log(location);
 
   //Using routing to link logout button and apply leave button
   const history = useHistory();
@@ -30,19 +33,23 @@ function SideBar() {
         onClick={() => {
           loadAnotherPage("dashboard");
         }}
-        id="dashb"
+        className={location.pathname === "/" ? "selected" : ""}
         key="2"
       >
-        Dashboard
+        Dashboard{" "}
+        <img
+          src={require("../../icons/arrowb.png")}
+          id="user_img"
+          alt="User"
+        ></img>
       </button>
-
       <button
         type="button"
         onClick={() => {
           loadAnotherPage("applyLeave");
         }}
         key="3"
-        id="apply"
+        className={location.pathname === "/addLeave" ? "selected" : ""}
       >
         Apply For Leave{" "}
         <img
@@ -51,7 +58,6 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
-
       <button
         type="button"
         onClick={() => {
@@ -67,7 +73,6 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
-
       {role === "admin" ? (
         <button
           type="button"
@@ -76,7 +81,26 @@ function SideBar() {
           }}
           key="5"
         >
-          Add Employee{" "}
+          Leave management{" "}
+          <img
+            src={require("../../icons/arrowb.png")}
+            id="user_img"
+            alt="User"
+          ></img>
+        </button>
+      ) : (
+        ""
+      )}
+      }
+      {role === "admin" ? (
+        <button
+          type="button"
+          onClick={() => {
+            loadAnotherPage("applyLeave");
+          }}
+          key="6"
+        >
+          Employee{" "}
           <img
             src={require("../../icons/arrowb.png")}
             id="user_img"

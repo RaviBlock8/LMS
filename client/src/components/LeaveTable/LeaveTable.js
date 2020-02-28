@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import "./LeaveTable.css";
 
 function LeaveTable(props) {
+
   const getRows = () => {
     return props.data.map(entry => {
       return <LeaveEntry id={entry.id} entry={entry}></LeaveEntry>;
@@ -27,6 +28,7 @@ function LeaveTable(props) {
   );
 }
 
+//reducer code
 const mapStateToProps = state => {
   return {
     data: state.data
