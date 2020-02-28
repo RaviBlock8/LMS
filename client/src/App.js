@@ -36,13 +36,13 @@ function App(props) {
 
           <div>
             <Switch>
-              <Route path="/addemp">
+              <Route path="/addEmployee">
                 <AddEmployee></AddEmployee>
               </Route>
-              <Route path="/emp">
+              <Route path="/empManager">
                 <EmployeeManager></EmployeeManager>
               </Route>
-              <Route path="/lapr">
+              <Route path="/leaveApproval">
                 <LeaveApproval></LeaveApproval>
               </Route>
               <Route path="/addLeave">
