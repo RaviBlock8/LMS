@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 //Fixed components
 import Nav from "./components/NavAndSide/Nav";
 import Sidebar from "./components/NavAndSide/SideBar";
 //Pages
 import EmpDashboard from "./pages/EmpDashboard/EmpDashboard";
-import ApplyLeave from "./pages/ApplyLeave/ApplyLeave";
 import Login from "./pages/Login/Login";
-
+import AddLeave from './pages/AddLeave/AddLeave'
 //css file import
 import "./App.css";
 
@@ -14,20 +13,26 @@ import "./App.css";
 import { connect } from "react-redux";
 //Router import
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+<<<<<<< HEAD
 import LeaveApproval from "./pages/LeaveApproval/LeaveApproval";
 import EmployeeManager from "./pages/EmployeeManager/EmployeeManager";
 import AddEmployee from "./pages/EmployeeManager/AddEmployee/AddEmployee";
+=======
+//importing providers
+import {EmpIdContext} from './contexts/EmpId/EmpIdContext'
+
+
+
+
+>>>>>>> 5b482931f7b52431ac55d1fc6b2746616a2edf1a
 
 function App(props) {
   const [isAuthenticated, setAuthentication] = useState(false);
 
-  return isAuthenticated ? (
-    <Router basename={`${process.env.PUBLIC_URL}/`}>
-      <div className="App" id="app">
-        <div id="top">
-          <Nav setAuthentication={setAuthentication}></Nav>
-        </div>
+  let [empid,setEmpid]=useContext(EmpIdContext)
 
+
+<<<<<<< HEAD
         <div id="main">
           <Sidebar></Sidebar>
 
@@ -49,14 +54,41 @@ function App(props) {
                 <EmpDashboard />
               </Route>
             </Switch>
+=======
+  return empid!=null ? (
+    <Router basename={`${process.env.PUBLIC_URL}/`}>
+      
+        <div className="App" id="app">
+          <div id="top">
+            <Nav setAuthentication={setAuthentication}></Nav>
+>>>>>>> 5b482931f7b52431ac55d1fc6b2746616a2edf1a
           </div>
 
-          <button onClick={props.addLeave}>Add Leave</button>
+          <div id="main">
+            <Sidebar></Sidebar>
+
+            <div>
+              <Switch>
+                <Route path="/addLeave">
+                  <AddLeave></AddLeave>
+                </Route>
+                <Route path="/">
+                  <EmpDashboard />
+                </Route>
+              </Switch>
+            </div>
+
+            <button onClick={props.addLeave}>Add Leave</button>
+          </div>
         </div>
-      </div>
+
+      
+      
     </Router>
   ) : (
-    <Login setAuthentication={setAuthentication} />
+      <Login setAuthentication={setAuthentication} />
+  
+    
   );
 }
 

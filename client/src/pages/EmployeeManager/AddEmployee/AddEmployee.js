@@ -10,7 +10,7 @@ function AddEmployee() {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        <div className="divOne">
           <label>
             First name<span id="mandatory">*</span>
           </label>
@@ -30,7 +30,7 @@ function AddEmployee() {
           />
           {errors.lastName && "Last name is required"}
         </div>
-        <div>
+        <div className="divTwo">
           <label>
             Email<span id="mandatory">*</span>
           </label>
@@ -45,7 +45,7 @@ function AddEmployee() {
           <input name="employeeId" ref={register({ required: true })} />
           {errors.employeeId && "Employee Id is required"}
         </div>
-        <div>
+        <div className="divThree">
           <label>
             Status<span id="mandatory">*</span>
           </label>
@@ -60,7 +60,7 @@ function AddEmployee() {
           </label>
           <DatePicker name="doj" ref={register({ required: true })} />
         </div>
-        <div>
+        <div className="divFour">
           <label>
             Role<span id="mandatory">*</span>
           </label>
@@ -88,7 +88,7 @@ function AddEmployee() {
           </select>
           {errors.gender && "Gender is required"}
         </div>
-        <div>
+        <div className="divfive">
           <label>
             Password<span id="mandatory">*</span>
           </label>
@@ -101,14 +101,18 @@ function AddEmployee() {
           <label>
             Confirm password<span id="mandatory">*</span>
           </label>
-          <input name="password2" ref={register({ required: true })} />
+          <input
+            name="password2"
+            type="password"
+            ref={register({ required: true })}
+          />
           {errors.password2 && "This field is required"}
         </div>
-        <div>
-          <input type="submit" />
-          {/* <button id="saveBtn" type="submit">
+        <div className="divSix">
+          {/* <input type="submit" /> */}
+          <button id="saveBtn" type="submit">
             Save
-          </button> */}
+          </button>
           {/* <button id="cancelBtn">Cancel</button> */}
         </div>
       </form>

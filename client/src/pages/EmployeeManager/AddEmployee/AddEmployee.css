@@ -24,6 +24,31 @@
     color: white;
 }
 
+/* label{
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+} */
+
 #mandatory{
     color: red;
+}
+
+.divOne{
+    margin-top: .5rem;
+}
+
+.divTwo{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.divThree{
+    margin-bottom: 1rem;
+}
+
+.divFour{
+    margin-bottom: 1rem;
+}
+
+.divFive{
+    margin-bottom: 1rem;
 }
