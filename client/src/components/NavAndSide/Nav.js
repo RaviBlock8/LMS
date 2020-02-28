@@ -15,7 +15,7 @@ function Nav(props) {
       </div>
 
       <div id="notep">
-        <span>LMS | ADMIN {empid}</span>
+        <span>LMS | ADMIN </span>
       </div>
 
       <div id="log">

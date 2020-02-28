@@ -20,9 +20,9 @@ import EmployeeManager from "./pages/EmployeeManager/EmployeeManager";
 import LeaveApproval from "./pages/LeaveApproval/LeaveApproval";
 
 function App(props) {
-  const [isAuthenticated, setAuthentication] = useState(false);
+  const [, setAuthentication] = useState(false);
 
-  let [empid, setEmpid] = useContext(EmpIdContext);
+  let [empid] = useContext(EmpIdContext);
 
   return empid != null ? (
     <Router basename={`${process.env.PUBLIC_URL}/`}>
@@ -36,13 +36,13 @@ function App(props) {
 
           <div>
             <Switch>
-              <Route path="/addEmployee">
+              <Route path="/addemp">
                 <AddEmployee></AddEmployee>
               </Route>
-              <Route path="/empManager">
+              <Route path="/emp">
                 <EmployeeManager></EmployeeManager>
               </Route>
-              <Route path="/leaveApproval">
+              <Route path="/lapr">
                 <LeaveApproval></LeaveApproval>
               </Route>
               <Route path="/addLeave">
