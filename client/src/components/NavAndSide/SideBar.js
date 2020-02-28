@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./side.css";
 import { useHistory, useLocation } from "react-router-dom";
+import { EmpIdContext } from "../../contexts/EmpId/EmpIdContext";
 
 function SideBar() {
-  //fake data
-  const role = "admin";
   //getting location
   let location = useLocation();
-  console.log(location);
 
   //Using routing to link logout button and apply leave button
   const history = useHistory();
+  //getting employee information
+  let [empid] = useContext(EmpIdContext);
+  let role = empid.role;
+  console.log("role", empid);
 
   const loadAnotherPage = page => {
     switch (page) {
@@ -43,6 +45,7 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
+
       <button
         type="button"
         onClick={() => {
@@ -58,6 +61,7 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
+
       <button
         type="button"
         onClick={() => {
@@ -73,7 +77,8 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
-      {role === "admin" ? (
+
+      {role == "admin" ? (
         <button
           type="button"
           onClick={() => {
@@ -91,7 +96,8 @@ function SideBar() {
       ) : (
         ""
       )}
-      {role === "admin" ? (
+
+      {role == "admin" ? (
         <button
           type="button"
           onClick={() => {
