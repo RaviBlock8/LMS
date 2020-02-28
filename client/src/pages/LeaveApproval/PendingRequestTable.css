@@ -1,11 +1,11 @@
 #tablePending table{
   
-    box-shadow: 3px 3px 8px black;
+    box-shadow: 3px 3px 6px black;
     border-radius: 5px;
     display: block;
-    width:60vw;
+    width:78vw;
     
-    height: 40vh;
+    height: 32vh;
     overflow-y: scroll;
     margin-left: 1rem;
     margin-top: .5rem;
@@ -28,7 +28,8 @@ td , th{
     padding-left: 2rem;
     padding-bottom: 0.2rem;
     padding-top: 0.2rem;
-    margin-top: .5rem;
+    margin-top: 1.5rem;
+    font-size: 14px;
 }
 /* h3{
     margin-left: 1rem;
