@@ -91,7 +91,6 @@ function SideBar() {
       ) : (
         ""
       )}
-      }
       {role === "admin" ? (
         <button
           type="button"

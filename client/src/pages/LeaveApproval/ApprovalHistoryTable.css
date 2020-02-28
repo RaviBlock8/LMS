@@ -3,9 +3,9 @@
     box-shadow: 3px 3px 8px black;
     border-radius: 5px;
     display: block;
-    width:60vw;
+    width:78vw;
     
-    height: 40vh;
+    height: 32vh;
     overflow-y: scroll;
     margin-left: 1rem;
     margin-top: .5rem;
@@ -19,10 +19,11 @@
     padding-bottom: 0.2rem;
     padding-top: 0.2rem;
     margin-top: 2rem;
+    font-size: 14px;
 }
 td , th{
     box-sizing: border-box;
-    width:10vw;
+    width:16vw;
     height: 7vh;
     padding:1rem;
     margin:0;
