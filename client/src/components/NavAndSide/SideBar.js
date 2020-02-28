@@ -43,7 +43,6 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
-
       <button
         type="button"
         onClick={() => {
@@ -59,7 +58,6 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
-
       <button
         type="button"
         onClick={() => {
@@ -75,7 +73,6 @@ function SideBar() {
           alt="User"
         ></img>
       </button>
-
       {role === "admin" ? (
         <button
           type="button"
@@ -94,15 +91,14 @@ function SideBar() {
       ) : (
         ""
       )}
-
-<<<<<<< HEAD
+      }
       {role === "admin" ? (
         <button
           type="button"
           onClick={() => {
             loadAnotherPage("applyLeave");
           }}
-          key="5"
+          key="6"
         >
           Employee{" "}
           <img
@@ -110,19 +106,6 @@ function SideBar() {
             id="user_img"
             alt="User"
           ></img>
-=======
-      }
-
-      {
-        role==='admin'?
-        <button type="button" onClick={()=>{loadAnotherPage('applyLeave')}} key="6" >
-        Employee{" "}
-        <img
-          src={require("../../icons/arrowb.png")}
-          id="user_img"
-          alt="User"
-        ></img>
->>>>>>> 5b482931f7b52431ac55d1fc6b2746616a2edf1a
         </button>
       ) : (
         ""
